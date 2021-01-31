@@ -1,1 +1,1 @@
-# HS_quickReconnect
+# HS_quickReconnect for MacOS
