@@ -180,17 +180,18 @@ int main(int argc, char** argv){
 	}
 	
 
-
+	/*
 	string ori_rules;
 	read_current_rules(ori_rules);
 	string new_rules = ori_rules;
 	append_rules(new_rules, ip_list);
+	*/
 
 	string test_rules;
 	append_rules(test_rules, ip_list);
 
 	ostringstream command;
-	command << "printf \"" << test_rules << "\" | pfctl -ef -  &>/dev/null";
+	command << "printf \"" << test_rules << "\" | cat /etc/pf.conf -  | pfctl -ef -  &>/dev/null";
 	system(command.str().c_str());
 
 
