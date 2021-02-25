@@ -119,7 +119,7 @@ class HS_log{
 		HS_log(const string PATH ){
 			file = new ifstream(PATH);
 			string line;
-			while(getline(*file, line));
+			file->seekg(0, file->end);
 			//file->clear();
 		}
 
